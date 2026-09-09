@@ -3,7 +3,13 @@ from core.common_passwords import is_common_password
 
 def analyze_password(password):
 
-    result = {}
+    result = {
+        "length": check_length(password),
+        "complexity": check_complexity(password),
+        "common_password": check_common_password(password),
+        "repetition": check_repetition(password),
+        "sequence": check_sequence(password)
+    }
     return result
 
 def check_length(password):
@@ -57,7 +63,26 @@ def check_complexity(password):
 def check_common_password(password):
     return is_common_password(password)
 
+def check_repetition(password):
+    for i in range(len(password) - 2):
+        if password[i] == password[i+1] == password[i+2]:
+            return True
+    return False
 
+def check_sequence(password):
+    password = password.lower()
+
+    for i in range(len(password)-2):
+        first = ord(password[i])
+        second = ord(password[i+1])
+        third = ord(password[i+2])
+
+        if second == first +1 and third == second +1:
+            return True
+
+        if second == first -1 and third == second -1:
+            return True
+    return False
 
 
 
