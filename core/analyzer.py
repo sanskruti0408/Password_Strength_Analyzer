@@ -1,4 +1,5 @@
 from core.common_passwords import is_common_password
+from core.correlation import calculate_correlation_score
 import math
 from core.patterns import (
     check_repetition,
@@ -14,7 +15,8 @@ def analyze_password(password):
         "common_password": check_common_password(password),
         "repetition": check_repetition(password),
         "sequence": check_sequence(password),
-        "predictability": check_predictability(password)
+        "predictability": check_predictability(password),
+        "keyboard_pattern": check_keyboard_pattern(password)
     }
 
     result["score"] = calculate_score(password)
@@ -244,9 +246,37 @@ def calculate_score(password):
 
     if check_common_password(password):
         score -= 20
+        
+    result = {
+        "length": check_length(password),
+        "complexity": check_complexity(password),
+        "common_password": check_common_password(password),
+        "repetition": check_repetition(password),
+        "sequence": check_sequence(password),
+        "predictability": check_predictability(password),
+        "keyboard_pattern": check_keyboard_pattern(password)
+    }
+
+    score += calculate_correlation_score(result)
+    
 
     return max(0, min(score, 100))
-
+    
+def calculate_entropy_score(entropy):
+    if entropy < 20:
+        return 0
+    elif entropy < 30:
+        return 5
+    elif entropy < 40:
+        return 8
+    elif entropy < 50:
+        return 11
+    elif entropy < 60:
+        return 14
+    elif entropy < 70:
+        return 17
+    else:
+        return 20
         
 
 
