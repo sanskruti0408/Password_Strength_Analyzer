@@ -1,5 +1,6 @@
 from core.common_passwords import is_common_password
 from core.correlation import calculate_correlation_score
+from core.suggestions import generate_suggestions
 import math
 from core.patterns import (
     check_repetition,
@@ -20,6 +21,8 @@ def analyze_password(password):
     }
 
     result["score"] = calculate_score(password)
+    result["correlation_score"] = calculate_correlation_score(result)
+    result["suggestions"] = generate_suggestions(result)
 
     return result
 
