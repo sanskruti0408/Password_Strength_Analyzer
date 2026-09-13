@@ -27,6 +27,8 @@ The analyzer goes beyond simple character-count rules by checking for predictabl
 - 👁️ Password visibility toggle
 - 🖥️ Graphical cybersecurity dashboard
 - 🧪 Automated unit testing
+- 📜 Scrollable security analysis panel
+- 🔐 Stronger password alternatives
 
 ## 🧠 Security Analysis
 
