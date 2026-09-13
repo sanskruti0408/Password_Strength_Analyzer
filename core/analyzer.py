@@ -13,6 +13,25 @@ from core.patterns import (
 
 
 def analyze_password(password):
+    if not password:
+        return {
+            "length": "Very Weak",
+            "complexity": {
+                "uppercase": False,
+                "lowercase": False,
+                "digit": False,
+                "symbol": False
+            },
+            "common_password": False,
+            "repetition": False,
+            "sequence": False,
+            "predictability": False,
+            "keyboard_pattern": False,
+            "score": 0,
+            "correlation_score": 0,
+            "suggestions": ["Enter a password to begin analysis."],
+            "entropy": 0
+        }
     result = {
         "length": check_length(password),
         "complexity": check_complexity(password),
