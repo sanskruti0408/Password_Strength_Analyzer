@@ -93,20 +93,20 @@ PasswordStrengthAnalyzer/
 │
 ├── main.py
 └── README.md
-⚙️ Technologies Used
+**##⚙️ Technologies Used**
 - Python
 - Tkinter
 - Regular Python libraries
 - unittest
 - File-based password dataset
-🚀 How to Run
+**##🚀 How to Run**
 1. Clone the repository
 git clone <repository-url>
 2. Navigate to the project directory
 cd PasswordStrengthAnalyzer
 3. Run the application
 python main.py
-🧪 Running Tests
+**##🧪 Running Tests**
 The project includes automated unit tests covering the core password-analysis functionality.
 Run:
 python -m unittest discover -s tests -v
@@ -115,7 +115,7 @@ Ran 17 tests in 0.008s
 
 OK
 All 17 automated tests passed successfully. ✅
-🔍 Example Analysis
+**##🔍 Example Analysis**
 Example passwords used during testing include:
 Password	Purpose
 password	Common and predictable password
@@ -126,23 +126,15 @@ A1!b2@C3#	Strong mixed-character password
 K7@mQ2!vR9	Strong unpredictable password
 
 
-🔒 Privacy
+**##🔒 Privacy**
 Password analysis is performed locally by the application.
 Passwords entered into the analyzer are not intentionally transmitted to an external service.
-🎓 Internship Project
+**##🎓 Internship Project**
 Project: Password Strength Analyzer
 Domain: Cyber Security & Ethical Hacking
 Role: Cyber Security Intern
 This project was developed as part of a cybersecurity internship to demonstrate practical implementation of password security analysis techniques.
-👩‍💻 Author
+**##👩‍💻 Author**
 Sanskruti Vharambale
 Diploma in Computer Engineering
 Cyber Security & Ethical Hacking
-
-### One correction before you paste it
-
-For the repository URL, **don't leave `<repository-url>`** in the final README. Put the actual GitHub URL there.
-
-And one more thing: I intentionally **didn't claim that entropy determines real crack time**. That's technically misleading, and your project looks more professional if we distinguish theoretical entropy from actual password predictability.
-
-Your README is now describing the project we **actually built and tested**, rather than making it sound bigger than it is. That's exactly what we want for submission. 🔒
