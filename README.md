@@ -43,6 +43,19 @@ It checks for patterns such as:
 
 The results are combined to produce an overall security score.
 
+## 🔐 Stronger Password Alternatives
+
+The analyzer generates stronger alternatives based on the entered password while keeping them easy to remember.
+
+For example:
+
+```text
+Input: sanskruti
+
+1. S@nskruti_4827
+2. S@nskruti#7314
+3. S@nskruti!2958
+
 ## 📊 Entropy Analysis
 
 The analyzer also calculates theoretical password entropy based on the character pools present in the password.
