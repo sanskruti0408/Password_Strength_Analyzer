@@ -62,7 +62,7 @@ The project includes a modern dark-themed Tkinter dashboard that displays:
 - 🔎 Individual security checks
 - 💡 Security recommendations
 - 👁️ Password visibility control
-- ⚡ Real-time analysis status
+- ⚡ Analysis status indicator
 
 ## 📁 Project Structure
 
@@ -136,7 +136,7 @@ python -m unittest discover -s tests -v
 **Test Result**
 
 ```
-Ran 17 tests in 0.008s
+Ran 17 tests
 
 OK
 ```
