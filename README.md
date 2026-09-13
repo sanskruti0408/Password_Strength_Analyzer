@@ -66,7 +66,7 @@ The project includes a modern dark-themed Tkinter dashboard that displays:
 
 ## 📁 Project Structure
 
-\`\`\`text
+```text
 PasswordStrengthAnalyzer/
 │
 ├── core/
@@ -93,7 +93,7 @@ PasswordStrengthAnalyzer/
 │
 ├── main.py
 └── README.md
-\`\`\`
+```
 
 ## ⚙️ Technologies Used
 
