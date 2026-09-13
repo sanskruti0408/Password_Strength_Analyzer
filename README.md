@@ -55,6 +55,7 @@ Input: sanskruti
 1. S@nskruti_4827
 2. S@nskruti#7314
 3. S@nskruti!2958
+```
 
 ## 📊 Entropy Analysis
 
