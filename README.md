@@ -66,7 +66,7 @@ The project includes a modern dark-themed Tkinter dashboard that displays:
 
 ## 📁 Project Structure
 
-```text
+\`\`\`text
 PasswordStrengthAnalyzer/
 │
 ├── core/
@@ -93,6 +93,8 @@ PasswordStrengthAnalyzer/
 │
 ├── main.py
 └── README.md
+\`\`\`
+
 ## ⚙️ Technologies Used
 
 - Python
@@ -103,22 +105,23 @@ PasswordStrengthAnalyzer/
 
 ## 🚀 How to Run
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
-```bash
+\`\`\`bash
 git clone <repository-url>
+\`\`\`
 
-## 2. Navigate to the Project Directory
+### 2. Navigate to the Project Directory
 
-```bash
+\`\`\`bash
 cd PasswordStrengthAnalyzer
-```
+\`\`\`
 
-## 3. Run the Application
+### 3. Run the Application
 
-```bash
+\`\`\`bash
 python main.py
-```
+\`\`\`
 
 ## 🧪 Running Tests
 
@@ -126,11 +129,17 @@ The project includes automated unit tests covering the core password analysis fu
 
 Run:
 
-```bash
+\`\`\`bash
 python -m unittest discover -s tests -v
-```
+\`\`\`
 
 **Test Result**
+
+\`\`\`
+Ran 17 tests in 0.008s
+
+OK
+\`\`\`
 
 All 17 automated tests passed successfully. ✅
 
@@ -164,5 +173,5 @@ This project was developed as part of a cybersecurity internship to demonstrate 
 
 **Sanskruti Vharambale**
 
-Diploma in Computer Engineering  
+Diploma in Computer Engineering
 Cyber Security & Ethical Hacking
