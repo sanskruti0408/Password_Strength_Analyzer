@@ -93,48 +93,76 @@ PasswordStrengthAnalyzer/
 │
 ├── main.py
 └── README.md
-**##⚙️ Technologies Used**
+## ⚙️ Technologies Used
+
 - Python
 - Tkinter
-- Regular Python libraries
+- Python Standard Library
 - unittest
 - File-based password dataset
-**##🚀 How to Run**
-1. Clone the repository
+
+## 🚀 How to Run
+
+### 1. Clone the repository
+
+```bash
 git clone <repository-url>
-2. Navigate to the project directory
+
+## 2. Navigate to the Project Directory
+
+```bash
 cd PasswordStrengthAnalyzer
-3. Run the application
+```
+
+## 3. Run the Application
+
+```bash
 python main.py
-**##🧪 Running Tests**
-The project includes automated unit tests covering the core password-analysis functionality.
+```
+
+## 🧪 Running Tests
+
+The project includes automated unit tests covering the core password analysis functionality.
+
 Run:
+
+```bash
 python -m unittest discover -s tests -v
-Test Result
-Ran 17 tests in 0.008s
+```
 
-OK
+**Test Result**
+
 All 17 automated tests passed successfully. ✅
-**##🔍 Example Analysis**
+
+## 🔍 Example Analysis
+
 Example passwords used during testing include:
-Password	Purpose
-password	Common and predictable password
-qwerty123	Keyboard and sequential pattern
-Password123!	Complex but predictable
-Abcdef12!	Sequential pattern with complexity
-A1!b2@C3#	Strong mixed-character password
-K7@mQ2!vR9	Strong unpredictable password
 
+| Password       | Purpose                                  |
+|-----------------|-------------------------------------------|
+| password        | Common and predictable password           |
+| qwerty123       | Keyboard and sequential pattern           |
+| Password123!    | Complex but predictable                   |
+| Abcdef12!       | Sequential pattern with complexity        |
+| A1!b2@C3#       | Strong mixed-character password           |
+| K7@mQ2!vR9      | Strong and less predictable password      |
 
-**##🔒 Privacy**
-Password analysis is performed locally by the application.
-Passwords entered into the analyzer are not intentionally transmitted to an external service.
-**##🎓 Internship Project**
-Project: Password Strength Analyzer
-Domain: Cyber Security & Ethical Hacking
-Role: Cyber Security Intern
+## 🔒 Privacy
+
+- Password analysis is performed locally by the application.
+- Passwords entered into the analyzer are not intentionally transmitted to an external service.
+
+## 🎓 Internship Project
+
+- **Project:** Password Strength Analyzer
+- **Domain:** Cyber Security & Ethical Hacking
+- **Role:** Cyber Security Intern
+
 This project was developed as part of a cybersecurity internship to demonstrate practical implementation of password security analysis techniques.
-**##👩‍💻 Author**
-Sanskruti Vharambale
-Diploma in Computer Engineering
+
+## 👩‍💻 Author
+
+**Sanskruti Vharambale**
+
+Diploma in Computer Engineering  
 Cyber Security & Ethical Hacking
