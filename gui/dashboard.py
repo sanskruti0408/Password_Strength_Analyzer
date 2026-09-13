@@ -159,13 +159,13 @@ class PasswordAnalyzerGUI:
         self.suggestions_text.config(
             text=suggestion_text
         )
-        
         alternatives = generate_alternatives(password)
+
         alternatives_text = "\n".join(
             f"{index}. {alternative}"
             for index, alternative in enumerate(alternatives, start=1)
         )
-        
+
         self.alternatives_text.config(
             text=alternatives_text
         )
@@ -597,18 +597,103 @@ class PasswordAnalyzerGUI:
         )
 
 
-        right_panel = tk.Frame(
+        right_container = tk.Frame(
             main,
             bg=self.colors["panel"],
             highlightbackground=self.colors["border"],
             highlightthickness=1
         )
 
-        right_panel.pack(
+        right_container.pack(
             side="right",
             fill="both",
             expand=True,
             padx=(10, 0)
+        )
+
+        right_canvas = tk.Canvas(
+            right_container,
+            bg=self.colors["panel"],
+            highlightthickness=0
+        )
+
+        right_scrollbar = tk.Scrollbar(
+            right_container,
+            orient="vertical",
+            command=right_canvas.yview
+        )
+
+        right_canvas.configure(
+            yscrollcommand=right_scrollbar.set
+        )
+
+        right_scrollbar.pack(
+            side="right",
+            fill="y"
+        )
+
+        right_canvas.pack(
+            side="left",
+            fill="both",
+            expand=True
+        )
+
+        right_panel = tk.Frame(
+            right_canvas,
+            bg=self.colors["panel"]
+        )
+
+        right_canvas_window = right_canvas.create_window(
+            (0, 0),
+            window=right_panel,
+            anchor="nw"
+        )
+
+
+        def update_scroll_region(event):
+            right_canvas.configure(
+                scrollregion=right_canvas.bbox("all")
+            )
+
+
+        def update_panel_width(event):
+            right_canvas.itemconfig(
+                right_canvas_window,
+                width=event.width
+            )
+
+
+        right_panel.bind(
+            "<Configure>",
+            update_scroll_region
+        )
+
+        right_canvas.bind(
+            "<Configure>",
+            update_panel_width
+        )
+
+
+        def on_mousewheel(event):
+            right_canvas.yview_scroll(
+                int(-1 * (event.delta / 120)),
+                "units"
+            )
+
+
+        right_canvas.bind(
+            "<Enter>",
+            lambda event: right_canvas.bind_all(
+                "<MouseWheel>",
+                on_mousewheel
+            )
+        )
+
+        right_canvas.bind(
+            "<Leave>",
+            lambda event: right_canvas.unbind_all(
+                "<MouseWheel>"
+            )
         )
 
         tk.Label(
@@ -817,6 +902,17 @@ class PasswordAnalyzerGUI:
             fill="x",
             padx=28
         )
+        tk.Label(
+            right_panel,
+            text="🔐  STRONGER ALTERNATIVES",
+            bg=self.colors["panel"],
+            fg=self.colors["white"],
+            font=("Segoe UI", 10, "bold")
+        ).pack(
+            anchor="w",
+            padx=28,
+            pady=(16, 8)
+        )
         
         self.alternatives_text = tk.Label(
             right_panel,
@@ -837,5 +933,3 @@ class PasswordAnalyzerGUI:
         )
         
         self.draw_empty_ring()
-
-
