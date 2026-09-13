@@ -1,7 +1,7 @@
 import tkinter as tk
 
 from core.analyzer import analyze_password
-
+from core.suggestions import generate_suggestions, generate_alternatives
 
 class PasswordAnalyzerGUI:
 
@@ -158,6 +158,16 @@ class PasswordAnalyzerGUI:
 
         self.suggestions_text.config(
             text=suggestion_text
+        )
+        
+        alternatives = generate_alternatives(password)
+        alternatives_text = "\n".join(
+            f"{index}. {alternative}"
+            for index, alternative in enumerate(alternatives, start=1)
+        )
+        
+        self.alternatives_text.config(
+            text=alternatives_text
         )
 
 
@@ -802,13 +812,30 @@ class PasswordAnalyzerGUI:
             padx=15,
             pady=10
         )
-
+        
         self.suggestions_text.pack(
             fill="x",
             padx=28
         )
-
-
+        
+        self.alternatives_text = tk.Label(
+            right_panel,
+            text="Stronger alternatives will appear here.",
+            bg=self.colors["panel_dark"],
+            fg=self.colors["muted"],
+            font=("Segoe UI", 9),
+            justify="left",
+            anchor="w",
+            wraplength=450,
+            padx=15,
+            pady=10
+        )
+        
+        self.alternatives_text.pack(
+            fill="x",
+            padx=28
+        )
+        
         self.draw_empty_ring()
 
 
