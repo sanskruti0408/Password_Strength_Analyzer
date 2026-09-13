@@ -173,5 +173,5 @@ This project was developed as part of a cybersecurity internship to demonstrate 
 
 **Sanskruti Vharambale**
 
--Diploma in Computer Engineering
--Cyber Security & Ethical Hacking
+Diploma in Computer Engineering<br>
+Cyber Security & Ethical Hacking
