@@ -107,21 +107,21 @@ PasswordStrengthAnalyzer/
 
 ### 1. Clone the Repository
 
-\`\`\`bash
-git clone <repository-url>
-\`\`\`
+```bash
+git clone https://github.com/sanskruti0408/Password_Strength_Analyzer.git
+```
 
 ### 2. Navigate to the Project Directory
 
-\`\`\`bash
+```bash
 cd PasswordStrengthAnalyzer
-\`\`\`
+```
 
 ### 3. Run the Application
 
-\`\`\`bash
+```bash
 python main.py
-\`\`\`
+```
 
 ## 🧪 Running Tests
 
@@ -129,17 +129,17 @@ The project includes automated unit tests covering the core password analysis fu
 
 Run:
 
-\`\`\`bash
+```bash
 python -m unittest discover -s tests -v
-\`\`\`
+```
 
 **Test Result**
 
-\`\`\`
+```
 Ran 17 tests in 0.008s
 
 OK
-\`\`\`
+```
 
 All 17 automated tests passed successfully. ✅
 
